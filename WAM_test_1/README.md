@@ -1,4 +1,4 @@
-Web Accessibility Tester
+Web Accessibility Tester needs Pa11y installed on your system. https://pa11y.org/
 
 Pa11y
 =====
