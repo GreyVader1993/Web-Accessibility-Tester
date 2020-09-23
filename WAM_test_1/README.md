@@ -5,11 +5,6 @@ Pa11y
 
 Pa11y is your automated accessibility testing pal. It runs accessibility tests on your pages via the command line or Node.js, so you can automate your testing process.
 
-[![NPM version][shield-npm]][info-npm]
-[![Node.js version support][shield-node]][info-node]
-[![Build status][shield-build]][info-build]
-[![LGPL-3.0 licensed][shield-license]][info-license]
-
 On the command line:
 
 ```sh
