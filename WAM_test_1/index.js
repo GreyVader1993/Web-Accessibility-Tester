@@ -20,7 +20,7 @@ const server = http.createServer((req, res) => {
         collectRequestData(req, result => {
             console.log(result);
             //console.log(cwd);
-            console.log("HELLO23");
+            console.log("HELLO232426");
             temp = result.InputLabelURL;
             text = 'pa11y --reporter html ' + temp +' > results.html';
             execute(text);
