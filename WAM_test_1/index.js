@@ -1,3 +1,4 @@
+const open = require('open');
 const http = require('http');
 const { parse } = require('querystring');
 function execute(command) {
@@ -8,27 +9,27 @@ function execute(command) {
     })
   }
 
-// function openInNewTab(url) {
-//    open( url, function (err) {
-//    if ( err ) throw err;    
-// });
-// }
+
+
 var temp;
 var text;
-//var cwd = process.cwd() + '\\' + 'results.html';
+var cwd = process.cwd() + '\\' + 'results.html';
 
 const server = http.createServer((req, res) => {
     if (req.method === 'POST') {
         collectRequestData(req, result => {
             console.log(result);
-            console.log(cwd);
+            //console.log(cwd);
             console.log("HELLO");
             temp = result.InputLabelURL;
             text = 'pa11y --reporter html ' + temp +' > results.html';
             execute(text);
             res.end(`Parsed data belonging to ${result.InputLabelURL}`);
-            //openInNewTab(cwd);
         });
+        (async () => {
+          // Opens the URL in the default browser.
+          await open(cwd);
+      })();
     } 
     else {
         res.end(`
